@@ -1,0 +1,641 @@
+
+> society-management@1.0.0 dev
+> concurrently "npm --prefix server run dev" "npm --prefix client run dev"
+
+[0] 
+[0] > server@1.0.0 dev
+[0] > nodemon index.js
+[0] 
+[1] 
+[1] > client@0.0.0 dev
+[1] > vite
+[1] 
+[0] [33m[nodemon] 3.1.14[39m
+[0] [33m[nodemon] to restart at any time, enter `rs`[39m
+[0] [33m[nodemon] watching path(s): *.*[39m
+[0] [33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[1] Port 5173 is in use, trying another one...
+[1] 
+[1]   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m332[22m[2m[0m ms[22m
+[1] 
+[1]   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[1] [2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:9860) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:9860) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:32604) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:32604) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:32832) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:32832) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:31524) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:31524) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:18360) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:18360) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m11:38:37 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[1] [2m11:38:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/contexts/AuthContext.jsx, /src/index.css[22m
+[1] [2m11:38:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/contexts/AuthContext.jsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[1] [2m11:38:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/contexts/AuthContext.jsx[22m
+[1] [2m11:39:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:24416) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:24416) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m11:45:55 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[1] [2m11:46:15 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[1] [2m11:46:55 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[1] [2m11:47:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/contexts/ToastContext.jsx, /src/index.css[22m
+[1] [2m11:47:16 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/ConfirmModal.jsx[22m
+[1] [2m11:47:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardPage.jsx, /src/index.css[22m
+[1] [2m11:47:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ReportsPage.jsx, /src/index.css[22m
+[1] [2m11:47:55 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/MaintenancePage.jsx, /src/index.css[22m
+[1] [2m11:48:01 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/PaymentsPage.jsx, /src/index.css[22m
+[1] [2m11:48:18 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/AuthPage.jsx, /src/index.css[22m
+[1] [2m11:48:26 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:21276) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:21276) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:26700) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:26700) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:33612) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:33612) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:12816) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:12816) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:23988) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:23988) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:25444) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:25444) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:31356) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:31356) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:30432) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:30432) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m1:52:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[1] [2m1:52:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/layouts/DashboardLayout.jsx, /src/index.css[22m
+[1] [2m2:02:10 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardPage.jsx, /src/index.css[22m
+[1] [2m2:02:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:4688) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:4688) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:1592) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:1592) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m2:10:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[1] [2m2:18:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ResidentsPage.jsx, /src/index.css[22m
+[1] [2m2:18:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ResidentsPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:19184) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:19184) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m2:23:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/NoticesPage.jsx, /src/index.css[22m
+[1] [2m2:24:02 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[1] [2m2:31:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[1] [2m2:35:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[1] [2m2:37:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:29220) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:29220) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m2:41:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/PaymentsPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:22676) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:22676) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:34412) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:34412) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:3348) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:3348) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] node:internal/modules/cjs/loader:1459
+[0]   throw err;
+[0]   ^
+[0] 
+[0] Error: Cannot find module '../controllers/visitorController'
+[0] Require stack:
+[0] - C:\SocietyManagement\server\src\routes\residentRoutes.js
+[0] - C:\SocietyManagement\server\src\app.js
+[0] - C:\SocietyManagement\server\index.js
+[0]     at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)
+[0]     at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)
+[0]     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)
+[0]     at Module._load (node:internal/modules/cjs/loader:1242:25)
+[0]     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+[0]     at Module.require (node:internal/modules/cjs/loader:1556:12)
+[0]     at require (node:internal/modules/helpers:152:16)
+[0]     at Object.<anonymous> (C:\SocietyManagement\server\src\routes\residentRoutes.js:15:33)
+[0]     at Module._compile (node:internal/modules/cjs/loader:1812:14)
+[0]     at Object..js (node:internal/modules/cjs/loader:1943:10) {
+[0]   code: 'MODULE_NOT_FOUND',
+[0]   requireStack: [
+[0]     'C:\\SocietyManagement\\server\\src\\routes\\residentRoutes.js',
+[0]     'C:\\SocietyManagement\\server\\src\\app.js',
+[0]     'C:\\SocietyManagement\\server\\index.js'
+[0]   ]
+[0] }
+[0] 
+[0] Node.js v24.14.0
+[0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:22308) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:22308) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:8232) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:8232) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:22212) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:22212) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m2:48:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[1] [2m2:51:10 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:16752) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:16752) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:18196) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:18196) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:23940) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:23940) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m2:57:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:30956) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:30956) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:28436) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:28436) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m3:03:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[1] [2m3:05:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ReportsPage.jsx, /src/index.css[22m
+[1] [2m3:06:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[1] [2m3:09:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:8004) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:8004) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:24808) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:24808) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:10592) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:10592) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:24784) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:24784) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:28944) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:28944) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:12500) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:12500) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:28132) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:28132) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m3:15:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:30356) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:30356) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m3:19:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:24364) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:24364) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[1] [2m3:21:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:26848) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:26848) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:31564) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"email":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] (node:31564) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"unitId":1} for model "User". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[1] [2m3:46:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[1] [2m3:46:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[1] [2m3:50:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[1] [2m3:50:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ResidentsPage.jsx, /src/index.css[22m
+[1] [2m3:50:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/MaintenancePage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[1] [2m3:57:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ResidentsPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[1] [2m4:11:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[1] [2m4:12:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[1] [2m4:12:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/AuthPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] C:\SocietyManagement\server\src\controllers\serviceRequestController.js:313
+[0]   getAssignableUsers,
+[0]   ^
+[0] 
+[0] ReferenceError: getAssignableUsers is not defined
+[0]     at Object.<anonymous> (C:\SocietyManagement\server\src\controllers\serviceRequestController.js:313:3)
+[0]     at Module._compile (node:internal/modules/cjs/loader:1812:14)
+[0]     at Object..js (node:internal/modules/cjs/loader:1943:10)
+[0]     at Module.load (node:internal/modules/cjs/loader:1533:32)
+[0]     at Module._load (node:internal/modules/cjs/loader:1335:12)
+[0]     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+[0]     at Module.require (node:internal/modules/cjs/loader:1556:12)
+[0]     at require (node:internal/modules/helpers:152:16)
+[0]     at Object.<anonymous> (C:\SocietyManagement\server\src\routes\residentRoutes.js:14:39)
+[0]     at Module._compile (node:internal/modules/cjs/loader:1812:14)
+[0] 
+[0] Node.js v24.14.0
+[0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[1] [2m4:17:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ServiceRequestsPage.jsx, /src/index.css[22m
+[1] [2m4:17:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ServiceRequestsPage.jsx, /src/index.css[22m
+[1] [2m4:17:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ServiceRequestsPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[1] [2m4:19:57 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ServiceRequestsPage.jsx, /src/index.css[22m
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[1] [2m4:24:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ServiceRequestsPage.jsx, /src/index.css[22m
+[1] [2m4:27:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ServiceRequestsPage.jsx, /src/index.css[22m
+[1] [2m4:28:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[1] [2m4:30:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/UserManagementPage.jsx, /src/index.css[22m
+[0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[1] npm --prefix client run dev exited with code 4294967295
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:23864) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:30700) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:31012) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:33896) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] [32m[nodemon] restarting due to changes...[39m
+[0] [32m[nodemon] starting `node index.js`[39m
+[0] [dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[0] Connected to MongoDB Atlas
+[0] Server running on http://localhost:5000
+[0] (node:17096) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[0] (Use `node --trace-warnings ...` to show where the warning was created)
+[0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m

@@ -1,0 +1,16 @@
+{
+  "name": "society-management",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Full-stack society management project using React and MongoDB Atlas",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "start": "npm --prefix server run start",
+    "build": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

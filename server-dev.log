@@ -1,0 +1,395 @@
+
+> server@1.0.0 dev
+> nodemon index.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:12012) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:31096) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:6644) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:28800) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:12508) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:32952) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:14148) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:2304) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:7780) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:33592) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:21944) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:17464) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:34668) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:30972) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:31200) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:23032) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> server@1.0.0 dev
+> nodemon index.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:21704) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[DomesticStaffOTP] phone=9116611009 otp=6710
+[DeliveryOTP] phone= otp=1034
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:31896) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:7976) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:22248) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:22780) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:19808) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:15760) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:33080) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:17548) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:564) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:9844) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:32796) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:18952) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:8008) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:17804) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:33576) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:6348) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:12824) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:1464) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:18096) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:18996) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:10476) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:21824) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:18492) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:32160) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:16780) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:13264) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:8088) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:8596) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:9744) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:30884) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:8104) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:14044) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:8664) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:30140) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (11) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:18664) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (11) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:30196) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+[dotenv@17.3.1] injecting env (11) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+Connected to MongoDB Atlas
+Server running on http://localhost:5000
+(node:2712) [MONGOOSE] Warning: mongoose: Duplicate schema index on {"expiresAt":1} for model "StaffOTP". This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)

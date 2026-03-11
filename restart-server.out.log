@@ -1,0 +1,7 @@
+
+> server@1.0.0 start
+> node index.js
+
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+Connected to MongoDB Atlas
+Server running on http://localhost:5000

@@ -1,0 +1,38 @@
+
+> client@0.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m577[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m5:43:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[2m5:47:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[2m5:52:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[2m6:23:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DomesticStaffPage.jsx, /src/index.css[22m
+[2m6:37:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DomesticStaffPage.jsx, /src/index.css[22m
+[2m6:43:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m6:43:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m6:44:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m6:44:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m6:45:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:11:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DomesticStaffPage.jsx, /src/index.css[22m
+[2m7:11:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:14:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:14:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DomesticStaffPage.jsx, /src/index.css[22m
+[2m7:26:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/layouts/DashboardLayout.jsx, /src/index.css[22m
+[2m7:27:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:36:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:40:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:42:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:44:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:44:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m7:51:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/AuthPage.jsx, /src/index.css[22m
+[2m7:51:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/AuthPage.jsx, /src/index.css[22m
+[2m8:04:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/AuthPage.jsx, /src/index.css[22m
+[2m8:09:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m8:11:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m8:13:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/VisitorManagementPage.jsx, /src/index.css[22m
+[2m8:16:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/Layout.jsx[22m
+[2m8:17:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/LostFoundPage.jsx, /src/index.css[22m

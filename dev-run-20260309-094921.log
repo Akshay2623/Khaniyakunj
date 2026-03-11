@@ -1,0 +1,4 @@
+
+> society-management@1.0.0 dev
+> concurrently "npm --prefix server run dev" "npm --prefix client run dev"
+
