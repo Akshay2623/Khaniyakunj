@@ -309,7 +309,7 @@ function UserManagementPage() {
 
   return (
     <div className="space-y-5">
-      <div className={`${!editingUserId ? 'grid gap-5 xl:grid-cols-[420px,1fr] xl:items-start' : ''}`}>
+      <div className={`${!editingUserId ? 'grid gap-5 xl:grid-cols-[minmax(380px,460px),minmax(0,1fr)] xl:items-start' : ''}`}>
       {!editingUserId && (
         <motion.section
           initial={{ opacity: 0, y: 12 }}
@@ -319,7 +319,7 @@ function UserManagementPage() {
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white">User Access & Role Management</h2>
           <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">Create and lifecycle-manage users with dynamic role impact.</p>
 
-          <form className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4" onSubmit={onSubmitUser}>
+          <form className="mt-4 grid gap-3 md:grid-cols-2" onSubmit={onSubmitUser}>
             <input name="name" value={form.name} onChange={onFormChange} placeholder="Full name" className="rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" required />
             <input type="email" name="email" value={form.email} onChange={onFormChange} placeholder="Enter email address" className="rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" required />
             <input name="phone" value={form.phone} onChange={onFormChange} placeholder="Enter phone number" className="rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
@@ -345,7 +345,7 @@ function UserManagementPage() {
                 name="unitId"
                 value={form.unitId}
                 onChange={onFormChange}
-                className="rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm dark:border-slate-700 dark:bg-slate-800"
+                className="md:col-span-2 rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm dark:border-slate-700 dark:bg-slate-800"
                 required
               >
                 <option value="">Select available unit</option>
@@ -365,7 +365,7 @@ function UserManagementPage() {
             )}
             <button
               disabled={submittingUser}
-              className="rounded-xl bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-300/60 hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 disabled:cursor-not-allowed disabled:opacity-60"
+              className="md:col-span-2 rounded-xl bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-300/60 hover:from-sky-500 hover:via-blue-500 hover:to-indigo-500 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {submittingUser ? 'Creating...' : 'Create User'}
             </button>
@@ -440,7 +440,7 @@ function UserManagementPage() {
             value={filters.search}
             onChange={(e) => setFilters((prev) => ({ ...prev, search: e.target.value, page: 1 }))}
             placeholder="Search by name/email/phone"
-            className="rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800"
+            className="w-full min-w-[220px] flex-1 rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800"
           />
           <select value={filters.role} onChange={(e) => setFilters((prev) => ({ ...prev, role: e.target.value, page: 1 }))} className="rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800">
             <option value="">All roles</option>

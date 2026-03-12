@@ -757,14 +757,14 @@ function Layout({ sidebarItems, admin, onLogout, theme, onToggleTheme, children 
         <motion.aside
           animate={{ width: collapsed ? 88 : 260 }}
           transition={{ type: 'spring', stiffness: 220, damping: 26 }}
-          className="saas-sidebar sticky top-0 hidden h-screen overflow-y-auto px-4 py-5 text-slate-100 shadow-panel lg:block"
+          className="saas-sidebar sticky top-0 hidden h-screen overflow-y-auto px-4 py-5 text-slate-700 shadow-panel lg:block"
         >
           <div className="mb-8 flex items-center justify-between">
-            <BrandLogo variant={collapsed ? 'icon' : 'full'} tone="light" compact size="sm" />
+            <BrandLogo variant={collapsed ? 'icon' : 'full'} tone="dark" compact size="sm" />
             <button
               type="button"
               onClick={() => setCollapsed((prev) => !prev)}
-              className="rounded-lg border border-slate-700 p-2 text-slate-300 transition hover:bg-slate-800"
+              className="rounded-lg border border-blue-200 bg-white/80 p-2 text-blue-700 transition hover:bg-blue-50"
               aria-label="Toggle sidebar"
             >
               {collapsed ? <FiChevronRight /> : <FiChevronLeft />}
@@ -781,8 +781,8 @@ function Layout({ sidebarItems, admin, onLogout, theme, onToggleTheme, children 
                   className={({ isActive }) =>
                     `relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition ${
                       isActive
-                        ? 'bg-gradient-to-r from-blue-400/35 via-sky-400/28 to-cyan-400/30 text-white shadow-[0_8px_20px_rgba(14,165,233,0.24)] ring-1 ring-sky-100/40'
-                        : 'text-slate-100/90 hover:bg-white/12 hover:text-white'
+                        ? 'bg-gradient-to-r from-cyan-100 via-blue-100 to-indigo-100 text-blue-800 shadow-[0_8px_16px_rgba(37,99,235,0.14)] ring-1 ring-blue-200'
+                        : 'text-slate-700 hover:bg-blue-50 hover:text-blue-700'
                     }`
                   }
                 >
@@ -794,10 +794,10 @@ function Layout({ sidebarItems, admin, onLogout, theme, onToggleTheme, children 
           </nav>
 
           {!collapsed && (
-            <div className="mt-8 rounded-xl border border-slate-700 bg-slate-900/80 p-3">
-              <p className="text-xs uppercase tracking-wider text-cyan-200/80">Logged in</p>
-              <p className="mt-2 text-sm font-semibold text-white">{admin?.name || 'Admin'}</p>
-              <p className="truncate text-xs text-slate-400">{admin?.email}</p>
+            <div className="mt-8 rounded-xl border border-blue-200 bg-white/85 p-3">
+              <p className="text-xs uppercase tracking-wider text-blue-700/80">Logged in</p>
+              <p className="mt-2 text-sm font-semibold text-slate-800">{admin?.name || 'Admin'}</p>
+              <p className="truncate text-xs text-slate-500">{admin?.email}</p>
             </div>
           )}
         </motion.aside>
@@ -1605,7 +1605,7 @@ function Layout({ sidebarItems, admin, onLogout, theme, onToggleTheme, children 
                   className={({ isActive }) =>
                     `rounded-xl p-2 ${
                       isActive
-                        ? 'bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 shadow-[0_6px_14px_rgba(14,165,233,0.22)] dark:bg-cyan-900/40 dark:text-cyan-200'
+                        ? 'bg-gradient-to-r from-cyan-100 via-blue-100 to-indigo-100 text-blue-700 shadow-[0_6px_12px_rgba(37,99,235,0.14)] dark:bg-cyan-900/40 dark:text-cyan-200'
                         : 'text-slate-500 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800'
                     }`
                   }

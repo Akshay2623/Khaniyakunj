@@ -324,12 +324,16 @@ function MarketplacePage() {
         </p>
       </section>
 
+      <div className={canCreate && canModerate ? 'grid gap-4 xl:grid-cols-[minmax(360px,420px),minmax(0,1fr)] xl:items-start' : 'space-y-4'}>
       {canCreate ? (
         <>
         {editingId ? <div className="fixed inset-0 z-[120] bg-slate-900/45 backdrop-blur-[2px]" /> : null}
-        <AppCard className={`space-y-3 ${editingId ? 'fixed left-1/2 top-1/2 z-[130] w-[min(980px,92vw)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto max-h-[85vh]' : ''}`}>
+        <AppCard className={`space-y-3 ${canModerate ? 'xl:sticky xl:top-24' : ''} ${editingId ? 'fixed left-1/2 top-1/2 z-[130] w-[min(980px,92vw)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto max-h-[85vh]' : ''}`}>
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{editingId ? 'Edit Listing' : 'Post Item For Sale'}</h2>
+            <div>
+              <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{editingId ? 'Edit Listing' : 'Post Item For Sale'}</h2>
+              {!editingId ? <p className="mt-0.5 text-xs text-slate-500">Create listing quickly and manage it from board.</p> : null}
+            </div>
             {editingId ? (
               <AppButton type="button" variant="secondary" onClick={resetForm}>
                 <FiX size={14} />
@@ -411,7 +415,7 @@ function MarketplacePage() {
         </>
       ) : null}
 
-      <AppCard className="space-y-3">
+      <AppCard className={`space-y-3 ${canCreate && canModerate ? 'classy-list-shell min-h-[680px]' : ''}`}>
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <button
@@ -510,6 +514,7 @@ function MarketplacePage() {
           <EmptyState message={activeTab === 'mine' ? 'No products in your listings yet.' : 'No products listed yet.'} />
         )}
       </AppCard>
+      </div>
 
       {detailItem ? (
         <div className="fixed inset-0 z-[1200] flex items-center justify-center bg-slate-900/45 p-3">
@@ -518,7 +523,7 @@ function MarketplacePage() {
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-indigo-600">Listing Details</p>
                 <h3 className="mt-1 text-lg font-semibold">{detailItem.title}</h3>
-                <p className="mt-0.5 text-sm text-slate-600">{detailItem.category} · {detailItem.condition}</p>
+                <p className="mt-0.5 text-sm text-slate-600">{detailItem.category} - {detailItem.condition}</p>
               </div>
               <button type="button" onClick={() => setDetailItem(null)} className="rounded-lg bg-slate-100 p-1.5 text-slate-600">
                 <FiX size={16} />
