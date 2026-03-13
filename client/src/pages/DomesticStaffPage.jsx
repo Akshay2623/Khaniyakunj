@@ -329,8 +329,8 @@ function DomesticStaffPage() {
 
       {isResident && (
         <>
-          <div className="grid gap-5 xl:grid-cols-[390px,1fr] xl:items-start">
-            <section className="xl:sticky xl:top-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
+          <div className="grid gap-5 2xl:grid-cols-[390px,1fr] 2xl:items-start">
+            <section className="2xl:sticky 2xl:top-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
               <div className="mb-3 flex items-start justify-between gap-2">
                 <div>
                   <h3 className="inline-flex items-center gap-2 text-lg font-semibold text-slate-900">

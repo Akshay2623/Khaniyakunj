@@ -8,7 +8,7 @@ const router = express.Router();
 router.get(
   '/stats',
   protect,
-  authorizeRoles(ROLES.ADMIN, ROLES.COMMITTEE, ROLES.TENANT, ROLES.GUARD),
+  authorizeRoles(ROLES.SUPER_ADMIN, ROLES.ADMIN, ROLES.COMMITTEE, ROLES.TENANT, ROLES.OWNER, ROLES.RESIDENT, ROLES.GUARD),
   getDashboardStats
 );
 

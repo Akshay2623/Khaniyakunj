@@ -197,8 +197,8 @@ function UnitManagementPage() {
         <SummaryCard label="Inactive" value={summary.inactiveUnits || 0} />
       </div>
 
-      <div className="grid gap-5 xl:grid-cols-[minmax(380px,460px),minmax(0,1fr)] xl:items-start">
-      <section className="xl:sticky xl:top-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
+      <div className="grid gap-5 2xl:grid-cols-[minmax(380px,460px),minmax(0,1fr)] 2xl:items-start">
+      <section className="2xl:sticky 2xl:top-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
         <h3 className="text-lg font-semibold text-slate-900">Create Unit</h3>
         <form onSubmit={submitUnit} className="mt-3 grid gap-3 sm:grid-cols-2">
           <input value={form.wing} onChange={(e) => setForm((prev) => ({ ...prev, wing: e.target.value }))} placeholder="Wing / Tower (e.g. A)" className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
@@ -255,7 +255,7 @@ function UnitManagementPage() {
 
       <section className="classy-list-shell rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
         <div className="classy-list-toolbar mb-3 flex flex-wrap items-center gap-2">
-          <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search wing/flat" className="w-full min-w-[220px] flex-1 rounded-xl border border-slate-200 px-3 py-2 text-sm" />
+          <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search wing/flat" className="w-full min-w-0 flex-1 rounded-xl border border-slate-200 px-3 py-2 text-sm sm:min-w-[220px]" />
           <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)} className="min-w-[140px] rounded-xl border border-slate-200 px-3 py-2 text-sm">
             <option value="">All status</option>
             {UNIT_STATUSES.map((status) => (

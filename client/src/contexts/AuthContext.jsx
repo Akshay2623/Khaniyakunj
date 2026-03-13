@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { API_BASE_URL } from '../lib/apiBase.js';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = API_BASE_URL;
 const TOKEN_KEY = 'society_mgmt_token';
 
 const AuthContext = createContext(null);

@@ -11,6 +11,11 @@
     min-height: 100%;
   }
 
+  html {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
   :root {
     --app-bg-a: #f3f8ff;
     --app-bg-b: #ecf3ff;
@@ -41,6 +46,8 @@
       linear-gradient(160deg, var(--app-bg-a), var(--app-bg-b) 60%, var(--app-bg-c));
     @apply text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-100;
     font-size: 15.5px;
+    overflow-x: hidden;
+    text-size-adjust: 100%;
   }
 
   h1,
@@ -119,6 +126,15 @@
 
   .saas-main {
     background: transparent;
+  }
+
+  .workspace-skin,
+  .workspace-skin * {
+    min-width: 0;
+  }
+
+  .workspace-skin .saas-main > * {
+    max-width: 100%;
   }
 
   .saas-card {

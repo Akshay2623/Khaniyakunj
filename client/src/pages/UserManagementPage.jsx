@@ -309,12 +309,12 @@ function UserManagementPage() {
 
   return (
     <div className="space-y-5">
-      <div className={`${!editingUserId ? 'grid gap-5 xl:grid-cols-[minmax(380px,460px),minmax(0,1fr)] xl:items-start' : ''}`}>
+      <div className={`${!editingUserId ? 'grid gap-5 2xl:grid-cols-[minmax(380px,460px),minmax(0,1fr)] 2xl:items-start' : ''}`}>
       {!editingUserId && (
         <motion.section
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          className="xl:sticky xl:top-24 rounded-3xl border border-sky-200/80 bg-gradient-to-br from-white via-sky-50 to-blue-100/80 p-5 shadow-panel dark:border-slate-800 dark:bg-slate-900"
+          className="2xl:sticky 2xl:top-24 rounded-3xl border border-sky-200/80 bg-gradient-to-br from-white via-sky-50 to-blue-100/80 p-5 shadow-panel dark:border-slate-800 dark:bg-slate-900"
         >
           <h2 className="text-xl font-semibold text-slate-900 dark:text-white">User Access & Role Management</h2>
           <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">Create and lifecycle-manage users with dynamic role impact.</p>
@@ -440,7 +440,7 @@ function UserManagementPage() {
             value={filters.search}
             onChange={(e) => setFilters((prev) => ({ ...prev, search: e.target.value, page: 1 }))}
             placeholder="Search by name/email/phone"
-            className="w-full min-w-[220px] flex-1 rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800"
+            className="w-full min-w-0 flex-1 rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 sm:min-w-[220px] dark:border-slate-700 dark:bg-slate-800"
           />
           <select value={filters.role} onChange={(e) => setFilters((prev) => ({ ...prev, role: e.target.value, page: 1 }))} className="rounded-xl border border-sky-200 bg-white/90 px-3 py-2 text-sm shadow-sm focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800">
             <option value="">All roles</option>

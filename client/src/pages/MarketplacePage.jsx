@@ -324,11 +324,11 @@ function MarketplacePage() {
         </p>
       </section>
 
-      <div className={canCreate && canModerate ? 'grid gap-4 xl:grid-cols-[minmax(360px,420px),minmax(0,1fr)] xl:items-start' : 'space-y-4'}>
+      <div className={canCreate && canModerate ? 'grid gap-4 2xl:grid-cols-[minmax(360px,420px),minmax(0,1fr)] 2xl:items-start' : 'space-y-4'}>
       {canCreate ? (
         <>
         {editingId ? <div className="fixed inset-0 z-[120] bg-slate-900/45 backdrop-blur-[2px]" /> : null}
-        <AppCard className={`space-y-3 ${canModerate ? 'xl:sticky xl:top-24' : ''} ${editingId ? 'fixed left-1/2 top-1/2 z-[130] w-[min(980px,92vw)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto max-h-[85vh]' : ''}`}>
+        <AppCard className={`space-y-3 ${canModerate ? '2xl:sticky 2xl:top-24' : ''} ${editingId ? 'fixed left-1/2 top-1/2 z-[130] w-[min(980px,92vw)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto max-h-[85vh]' : ''}`}>
           <div className="flex items-center justify-between gap-3">
             <div>
               <h2 className="text-lg font-semibold text-slate-900 dark:text-white">{editingId ? 'Edit Listing' : 'Post Item For Sale'}</h2>

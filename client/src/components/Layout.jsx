@@ -21,6 +21,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useAuth } from '../contexts/AuthContext.jsx';
 import { useToast } from '../contexts/ToastContext.jsx';
 import BrandLogo from './auth/BrandLogo.jsx';
+import { API_BASE_URL } from '../lib/apiBase.js';
 
 function Layout({ sidebarItems, admin, onLogout, theme, onToggleTheme, children }) {
   const { apiRequest, token } = useAuth();
@@ -79,7 +80,7 @@ function Layout({ sidebarItems, admin, onLogout, theme, onToggleTheme, children 
   const notificationButtonRef = useRef(null);
   const profilePanelRef = useRef(null);
   const profileButtonRef = useRef(null);
-  const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  const apiUrl = API_BASE_URL;
 
   const routeTitleMap = {
     '/app/dashboard': 'Command Dashboard',
@@ -804,13 +805,13 @@ function Layout({ sidebarItems, admin, onLogout, theme, onToggleTheme, children 
 
         <div className="flex h-full min-h-0 flex-1 flex-col overflow-hidden">
           <header className="saas-topbar sticky top-0 z-20 px-4 py-3 md:px-6">
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex flex-wrap items-start justify-between gap-3 sm:items-center">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-cyan-700 dark:text-cyan-300">{roleLabel}</p>
                 <h1 className="font-display text-2xl font-semibold text-slate-800 dark:text-white">{pageTitle}</h1>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center justify-end gap-2">
                 <button
                   type="button"
                   onClick={() => {
@@ -944,7 +945,7 @@ function Layout({ sidebarItems, admin, onLogout, theme, onToggleTheme, children 
                   className="mt-3 overflow-hidden rounded-2xl border border-rose-200/80 bg-gradient-to-r from-rose-50 via-white to-rose-100/70 text-slate-900 shadow-lg dark:border-rose-800/60 dark:from-rose-950/40 dark:via-slate-900 dark:to-rose-950/30 dark:text-slate-100"
                 >
                   <div className="flex flex-wrap items-start gap-4 px-4 py-3.5 sm:px-5 sm:py-4">
-                    <div className="min-w-[230px] flex-1">
+                    <div className="min-w-0 flex-1 sm:min-w-[230px]">
                       <span className="inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-100 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-[0.08em] text-rose-700 dark:border-rose-700/60 dark:bg-rose-900/40 dark:text-rose-200">
                         <span className="inline-flex h-2 w-2 rounded-full bg-rose-500 shadow-[0_0_0_0_rgba(244,63,94,0.5)] animate-[ticker-pulse_2s_infinite]" />
                         Active Alert

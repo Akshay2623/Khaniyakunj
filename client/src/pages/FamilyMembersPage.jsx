@@ -331,7 +331,7 @@ function FamilyMembersPage() {
         <h2 className="mt-2 text-3xl font-semibold text-slate-900 dark:text-white">Flat-wise Family Overview</h2>
       </section>
 
-      <div className="grid gap-4 xl:grid-cols-[1.1fr,1.4fr]">
+      <div className="grid gap-4 2xl:grid-cols-[1.1fr,1.4fr]">
         <section className="classy-list-shell rounded-2xl border border-slate-200 bg-white p-4 shadow-panel dark:border-slate-700 dark:bg-slate-900">
           <div className="flex items-center justify-between gap-2">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Flats & Total Members</h3>

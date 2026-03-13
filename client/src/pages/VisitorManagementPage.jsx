@@ -764,7 +764,7 @@ function VisitorManagementPage() {
           </div>
 
           {guardTab === 'visitors' && (
-            <section className="grid gap-4 xl:grid-cols-[1.05fr,1.45fr]">
+            <section className="grid gap-4 2xl:grid-cols-[1.05fr,1.45fr]">
               <motion.form initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} onSubmit={createGuardVisitorRequest} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
                 <h3 className="text-lg font-semibold text-slate-900">New Visitor Entry</h3>
                 <p className="mt-1 text-sm text-slate-500">This request is sent to the selected tenant for approval.</p>
@@ -862,7 +862,7 @@ function VisitorManagementPage() {
           )}
 
           {guardTab === 'domestic' && (
-            <section className="grid gap-4 xl:grid-cols-[1.05fr,1.45fr]">
+            <section className="grid gap-4 2xl:grid-cols-[1.05fr,1.45fr]">
               <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
                 <h3 className="inline-flex items-center gap-2 text-lg font-semibold text-slate-900"><FiUsers /> Domestic Staff Entry</h3>
                 <p className="mt-1 text-sm text-slate-500">Verify staff OTP and allow gate entry.</p>
@@ -1016,7 +1016,7 @@ function VisitorManagementPage() {
           )}
 
           {guardTab === 'deliveries' && (
-            <section className="grid gap-4 xl:grid-cols-[1.05fr,1.45fr]">
+            <section className="grid gap-4 2xl:grid-cols-[1.05fr,1.45fr]">
               <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
                 <h3 className="inline-flex items-center gap-2 text-lg font-semibold text-slate-900"><FiTruck /> Delivery OTP Entry</h3>
                 <p className="mt-1 text-sm text-slate-500">Guard must verify resident OTP before allowing delivery person entry.</p>
@@ -1291,7 +1291,7 @@ function VisitorManagementPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 xl:grid-cols-[1.2fr,1fr]">
+          <div className="grid gap-4 2xl:grid-cols-[1.2fr,1fr]">
             <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
               <h3 className="text-lg font-semibold text-slate-900">Daily Visitor Count</h3>
               <p className="mt-1 text-sm text-slate-500">Weekly trend for visitor requests.</p>

@@ -4,8 +4,9 @@ import { FiArrowLeft, FiCheckCircle, FiEye, FiEyeOff, FiLock } from 'react-icons
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import AuthSplitLayout from '../components/auth/AuthSplitLayout.jsx';
 import BrandLogo from '../components/auth/BrandLogo.jsx';
+import { API_BASE_URL } from '../lib/apiBase.js';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = API_BASE_URL;
 
 function ResetPasswordPage() {
   const navigate = useNavigate();

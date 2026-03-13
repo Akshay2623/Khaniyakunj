@@ -405,12 +405,12 @@ function ServiceRequestsPage() {
         <StatCard title="Resolved" value={stats.resolved} icon={FiCheckCircle} />
       </div>
 
-      <div className={`grid gap-5 ${canCreateRequest ? 'xl:grid-cols-[420px,1fr]' : ''}`}>
+      <div className={`grid gap-5 ${canCreateRequest ? '2xl:grid-cols-[420px,1fr]' : ''}`}>
         {canCreateRequest ? (
           <motion.section
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="xl:sticky xl:top-24 xl:self-start rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-cyan-50/45 to-emerald-50/45 p-5 shadow-panel dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900"
+            className="2xl:sticky 2xl:top-24 2xl:self-start rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-cyan-50/45 to-emerald-50/45 p-5 shadow-panel dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900"
           >
             <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Create Service Request</h2>
             <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">

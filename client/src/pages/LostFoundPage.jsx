@@ -276,9 +276,9 @@ function LostFoundPage() {
         </div>
       </motion.section>
 
-      <div className={`${isGuard ? 'grid gap-5 xl:grid-cols-[420px,1fr] xl:items-start' : ''}`}>
+      <div className={`${isGuard ? 'grid gap-5 2xl:grid-cols-[420px,1fr] 2xl:items-start' : ''}`}>
       {isGuard && (
-        <motion.form initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} onSubmit={postLostItem} className="xl:sticky xl:top-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
+        <motion.form initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} onSubmit={postLostItem} className="2xl:sticky 2xl:top-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h3 className="text-lg font-semibold text-slate-900">Post Found Item</h3>
             <button

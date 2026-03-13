@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import {
   FiActivity,
   FiAlertTriangle,
+  FiBarChart2,
   FiBell,
   FiClock,
   FiDollarSign,
@@ -10,6 +11,7 @@ import {
   FiLayers,
   FiMapPin,
   FiShield,
+  FiTrendingUp,
   FiUsers,
 } from 'react-icons/fi';
 import { useAuth } from '../contexts/AuthContext.jsx';
@@ -46,7 +48,7 @@ function MiniBars({ rows = [], color = 'bg-cyan-500' }) {
       {rows.map((row) => {
         const width = `${Math.max(6, Math.round((Number(row.value || 0) / max) * 100))}%`;
         return (
-          <div key={row.label} className="grid grid-cols-[96px,1fr,52px] items-center gap-2 text-xs">
+          <div key={row.label} className="grid grid-cols-[110px,1fr,56px] items-center gap-2 text-xs">
             <span className="truncate text-slate-500 dark:text-slate-400">{row.label}</span>
             <div className="h-2.5 rounded-full bg-slate-100 dark:bg-slate-800">
               <div className={`h-full rounded-full ${color}`} style={{ width }} />
@@ -57,6 +59,38 @@ function MiniBars({ rows = [], color = 'bg-cyan-500' }) {
       })}
     </div>
   );
+}
+
+function TrendBars({ rows = [] }) {
+  const max = useMemo(() => Math.max(1, ...rows.map((item) => Number(item.total || 0))), [rows]);
+  return (
+    <div className="grid gap-2">
+      {rows.map((row) => {
+        const total = Number(row.total || 0);
+        const completed = Number(row.completed || 0);
+        const totalWidth = `${Math.max(6, Math.round((total / max) * 100))}%`;
+        const completedRatio = total > 0 ? Math.max(0, Math.min(100, Math.round((completed / total) * 100))) : 0;
+        return (
+          <div key={row.month} className="grid grid-cols-[74px,1fr,66px] items-center gap-2 text-xs">
+            <span className="text-slate-500 dark:text-slate-400">{row.label}</span>
+            <div className="relative h-2.5 rounded-full bg-slate-100 dark:bg-slate-800">
+              <div className="h-full rounded-full bg-blue-300/70" style={{ width: totalWidth }} />
+              <div className="absolute left-0 top-0 h-full rounded-full bg-cyan-500" style={{ width: `${(parseFloat(totalWidth) * completedRatio) / 100}%` }} />
+            </div>
+            <span className="text-right font-semibold text-slate-700 dark:text-slate-200">{completed}/{total}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function formatMonthLabel(monthKey) {
+  if (!monthKey || !/^\d{4}-\d{2}$/.test(String(monthKey))) return String(monthKey || '-');
+  const [y, m] = String(monthKey).split('-');
+  const date = new Date(Number(y), Number(m) - 1, 1);
+  if (Number.isNaN(date.getTime())) return String(monthKey);
+  return date.toLocaleString(undefined, { month: 'short' });
 }
 
 function DashboardPage() {
@@ -74,6 +108,12 @@ function DashboardPage() {
   const [unreadNotifications, setUnreadNotifications] = useState(0);
   const [serviceStatusRows, setServiceStatusRows] = useState([]);
   const [activityRows, setActivityRows] = useState([]);
+  const [dashboardStats, setDashboardStats] = useState({
+    totals: { totalResidents: 0, totalFlats: 0, pendingComplaints: 0, overdueBills: 0 },
+    monthlyRevenue: { month: '', paidAmount: 0, lateFeeCollected: 0, totalRevenue: 0, billCount: 0 },
+    complaintDistributionByCategory: [],
+    serviceRequestTrend: [],
+  });
 
   const role = String(admin?.role || '').toLowerCase().replace(/[\s-]+/g, '_');
   const isResident = ['resident', 'tenant', 'owner'].includes(role);
@@ -104,24 +144,27 @@ function DashboardPage() {
             { label: 'Amenities', value: Number(summary.upcomingAmenities || 0) },
             { label: 'Notices', value: Number((noticesPayload?.data || []).length) },
           ]);
-          setActivityRows((noticesPayload?.data || []).slice(0, 5).map((n) => ({
-            id: n._id,
-            title: n.title || 'Notice',
-            time: n.createdAt ? new Date(n.createdAt).toLocaleString() : '-',
-          })));
+          setActivityRows(
+            (noticesPayload?.data || []).slice(0, 5).map((n) => ({
+              id: n._id,
+              title: n.title || 'Notice',
+              time: n.createdAt ? new Date(n.createdAt).toLocaleString() : '-',
+            }))
+          );
           return;
         }
 
         const societyId = admin?.societyId ? `?societyId=${admin.societyId}` : '';
-        const [societies, residents, requests, maintenance, visitors, emergencies, notices, notifications] = await Promise.all([
+        const [societies, residents, requests, maintenance, visitors, emergencies, notices, notifications, statsPayload] = await Promise.all([
           apiRequest('/api/societies').catch(() => []),
           apiRequest(`/api/residents${societyId}`, { raw: true }).catch(() => ({ data: [] })),
           apiRequest(`/api/service-requests${societyId}`, { raw: true }).catch(() => ({ data: [] })),
           apiRequest(`/api/maintenance${societyId ? `${societyId}&limit=200` : '?limit=200'}`, { raw: true }).catch(() => ({ data: [] })),
-          apiRequest(`/api/visitors/analytics${societyId}`, { raw: true }).catch(() => ({ data: { pendingApprovals: 0, dailyCounts: [] } })),
+          apiRequest(`/api/visitors/analytics${societyId}`, { raw: true }).catch(() => ({ data: { pendingApprovals: 0 } })),
           apiRequest(`/api/security/emergency-alerts${societyId ? `${societyId}&includeResolved=true` : '?includeResolved=true'}`, { raw: true }).catch(() => ({ data: [] })),
           apiRequest(`/api/notices${societyId ? `${societyId}&limit=6` : '?limit=6'}`, { raw: true }).catch(() => ({ data: [] })),
           apiRequest('/api/notifications?limit=10', { raw: true }).catch(() => ({ unreadCount: 0 })),
+          apiRequest(`/api/dashboard/stats${societyId}`, { raw: true }).catch(() => null),
         ]);
 
         const residentRows = Array.isArray(residents?.data) ? residents.data : Array.isArray(residents) ? residents : [];
@@ -151,11 +194,19 @@ function DashboardPage() {
         setRecentNotices(noticesRows.slice(0, 5));
         setUnreadNotifications(Number(notifications?.unreadCount || 0));
         setServiceStatusRows(Array.from(statusMap.entries()).slice(0, 6).map(([label, value]) => ({ label, value })));
-        setActivityRows(requestRows.slice(0, 6).map((r) => ({
-          id: r._id,
-          title: r.title || 'Service request',
-          time: r.updatedAt ? new Date(r.updatedAt).toLocaleString() : '-',
-        })));
+        setActivityRows(
+          requestRows.slice(0, 6).map((r) => ({
+            id: r._id,
+            title: r.title || 'Service request',
+            time: r.updatedAt ? new Date(r.updatedAt).toLocaleString() : '-',
+          }))
+        );
+        setDashboardStats({
+          totals: statsPayload?.totals || { totalResidents: 0, totalFlats: 0, pendingComplaints: 0, overdueBills: 0 },
+          monthlyRevenue: statsPayload?.monthlyRevenue || { month: '', paidAmount: 0, lateFeeCollected: 0, totalRevenue: 0, billCount: 0 },
+          complaintDistributionByCategory: statsPayload?.complaintDistributionByCategory || [],
+          serviceRequestTrend: statsPayload?.serviceRequestTrend || [],
+        });
       } catch (err) {
         setError(err.message || 'Failed to load dashboard.');
       } finally {
@@ -165,6 +216,22 @@ function DashboardPage() {
 
     loadDashboard();
   }, [apiRequest, admin?.societyId, isResident]);
+
+  const complaintRows = useMemo(() => {
+    const rows = (dashboardStats.complaintDistributionByCategory || []).map((row) => ({
+      label: row.category || 'General',
+      value: Number(row.count || 0),
+    }));
+    return rows.length ? rows : [{ label: 'No data', value: 0 }];
+  }, [dashboardStats.complaintDistributionByCategory]);
+
+  const trendRows = useMemo(() => {
+    const rows = (dashboardStats.serviceRequestTrend || []).map((row) => ({
+      ...row,
+      label: formatMonthLabel(row.month),
+    }));
+    return rows.length ? rows : [{ month: 'na', label: 'NA', total: 0, completed: 0 }];
+  }, [dashboardStats.serviceRequestTrend]);
 
   if (loading) {
     return (
@@ -216,6 +283,15 @@ function DashboardPage() {
         <MetricCard label="Unread Alerts" value={unreadNotifications} icon={FiBell} tone="blue" />
       </div>
 
+      {!isResident ? (
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <MetricCard label="Total Flats" value={dashboardStats.totals.totalFlats || 0} icon={FiHome} tone="blue" />
+          <MetricCard label="Overdue Bills" value={dashboardStats.totals.overdueBills || 0} icon={FiAlertTriangle} tone="rose" />
+          <MetricCard label="Monthly Revenue" value={`INR ${Number(dashboardStats.monthlyRevenue.totalRevenue || 0).toFixed(2)}`} icon={FiTrendingUp} tone="green" />
+          <MetricCard label="Paid Bills" value={dashboardStats.monthlyRevenue.billCount || 0} icon={FiDollarSign} tone="amber" />
+        </div>
+      ) : null}
+
       <div className="grid gap-4 xl:grid-cols-3">
         <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-panel xl:col-span-2 dark:border-slate-700 dark:bg-slate-900">
           <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Service Workflow Pulse</h3>
@@ -243,6 +319,29 @@ function DashboardPage() {
           </div>
         </motion.section>
       </div>
+
+      {!isResident ? (
+        <div className="grid gap-4 xl:grid-cols-3">
+          <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-panel xl:col-span-2 dark:border-slate-700 dark:bg-slate-900">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">6-Month Service Trend</h3>
+            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Completed vs total requests</p>
+            <div className="mt-4">
+              <TrendBars rows={trendRows} />
+            </div>
+          </motion.section>
+
+          <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-panel dark:border-slate-700 dark:bg-slate-900">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Complaint Mix</h3>
+            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">By service category</p>
+            <div className="mt-4">
+              <MiniBars rows={complaintRows} color="bg-blue-500" />
+            </div>
+            <p className="mt-3 inline-flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
+              <FiBarChart2 size={12} /> Month: {dashboardStats.monthlyRevenue.month || '-'}
+            </p>
+          </motion.section>
+        </div>
+      ) : null}
 
       <div className="grid gap-4 xl:grid-cols-2">
         <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-panel dark:border-slate-700 dark:bg-slate-900">
@@ -282,4 +381,3 @@ function DashboardPage() {
 }
 
 export default DashboardPage;
-

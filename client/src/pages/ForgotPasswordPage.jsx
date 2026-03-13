@@ -4,8 +4,9 @@ import { FiArrowLeft, FiMail } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import AuthSplitLayout from '../components/auth/AuthSplitLayout.jsx';
 import BrandLogo from '../components/auth/BrandLogo.jsx';
+import { API_BASE_URL } from '../lib/apiBase.js';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = API_BASE_URL;
 
 function ForgotPasswordPage() {
   const [email, setEmail] = useState('');
