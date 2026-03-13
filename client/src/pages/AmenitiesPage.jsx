@@ -575,18 +575,6 @@ function AmenitiesPage() {
             </div>
           </div>
         )}
-        {canBook && !canManageAmenities && (
-          <div className="mt-3 flex justify-end">
-            <button
-              type="button"
-              onClick={() => openBookingModal()}
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2 text-sm font-semibold text-white hover:from-emerald-700 hover:to-teal-700"
-            >
-              <FiCalendar />
-              Book Amenity
-            </button>
-          </div>
-        )}
       </section>
 
       <section className="classy-list-shell rounded-2xl border border-slate-200 bg-white p-5 shadow-panel dark:border-slate-800 dark:bg-slate-900">
