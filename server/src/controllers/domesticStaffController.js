@@ -189,11 +189,21 @@ async function editStaff(req, res) {
       status,
     } = req.body;
 
-    const row = await Staff.findOne({
-      _id: id,
-      societyId: req.user.societyId,
-      residentId: req.user._id,
-    });
+    const role = normalizeRole(req.user?.role);
+    const isAdminRole = role === 'admin' || role === 'super_admin';
+    const filter = { _id: id };
+    if (isAdminRole) {
+      const scope = resolveAdminSocietyScope(req);
+      if (!scope.global && !scope.societyId) {
+        return res.status(400).json({ message: 'User is not mapped to a society.' });
+      }
+      if (scope.societyId) filter.societyId = scope.societyId;
+    } else {
+      filter.societyId = req.user.societyId;
+      filter.residentId = req.user._id;
+    }
+
+    const row = await Staff.findOne(filter);
     if (!row) {
       return res.status(404).json({ message: 'Staff not found.' });
     }
@@ -229,14 +239,29 @@ async function removeStaff(req, res) {
     if (!(await requireSocietyId(req, res))) return;
     const { id } = req.params;
 
-    const row = await Staff.findOneAndDelete({
-      _id: id,
-      societyId: req.user.societyId,
-      residentId: req.user._id,
-    });
+    const role = normalizeRole(req.user?.role);
+    const isAdminRole = role === 'admin' || role === 'super_admin';
+    const filter = { _id: id };
+    if (isAdminRole) {
+      const scope = resolveAdminSocietyScope(req);
+      if (!scope.global && !scope.societyId) {
+        return res.status(400).json({ message: 'User is not mapped to a society.' });
+      }
+      if (scope.societyId) filter.societyId = scope.societyId;
+    } else {
+      filter.societyId = req.user.societyId;
+      filter.residentId = req.user._id;
+    }
+
+    const row = await Staff.findOneAndDelete(filter);
     if (!row) {
       return res.status(404).json({ message: 'Staff not found.' });
     }
+    // Keep domestic staff board and logs in sync after deletion.
+    await Promise.all([
+      StaffEntryLog.deleteMany({ staffId: row._id, societyId: row.societyId }),
+      StaffOTP.deleteMany({ phone: normalizePhone(row.phone) }),
+    ]);
     return res.status(200).json({ success: true, message: 'Staff removed.', data: row });
   } catch {
     return res.status(400).json({ success: false, message: 'Failed to remove staff.', data: null });
@@ -514,7 +539,8 @@ async function listEntryLogs(req, res) {
       .populate('residentId', 'name email')
       .populate('guardId', 'name')
       .sort({ createdAt: -1 });
-    return res.status(200).json({ success: true, message: 'Staff logs fetched.', data: rows });
+    const visibleRows = rows.filter((row) => row.staffId);
+    return res.status(200).json({ success: true, message: 'Staff logs fetched.', data: visibleRows });
   } catch {
     return res.status(500).json({ success: false, message: 'Failed to fetch staff logs.', data: null });
   }

@@ -20,6 +20,20 @@ function normalizeUserShape(user) {
   return { ...user, role: normalizeClientRole(user.role) };
 }
 
+function extractProfile(rawProfile) {
+  if (!rawProfile || typeof rawProfile !== 'object') return { user: null, allowedModules: [] };
+  const payload = rawProfile.data && typeof rawProfile.data === 'object' ? rawProfile.data : rawProfile;
+  const userCandidate =
+    payload.user ||
+    payload.admin ||
+    (payload.role ? payload : null);
+  const allowed = payload.allowedModules || rawProfile.allowedModules || [];
+  return {
+    user: normalizeUserShape(userCandidate || null),
+    allowedModules: Array.isArray(allowed) ? allowed : [],
+  };
+}
+
 function resolveAllowedModules(userRole, modules = []) {
   const set = new Set(Array.isArray(modules) ? modules : []);
   const role = String(userRole || '').toLowerCase();
@@ -35,13 +49,23 @@ function resolveAllowedModules(userRole, modules = []) {
 }
 
 export function AuthProvider({ children }) {
-  const [token, setToken] = useState(() => localStorage.getItem(TOKEN_KEY) || '');
+  const [token, setToken] = useState(() => {
+    try {
+      return localStorage.getItem(TOKEN_KEY) || '';
+    } catch {
+      return '';
+    }
+  });
   const [admin, setAdmin] = useState(null);
   const [allowedModules, setAllowedModules] = useState([]);
   const [authChecked, setAuthChecked] = useState(false);
 
   function clearSession() {
-    localStorage.removeItem(TOKEN_KEY);
+    try {
+      localStorage.removeItem(TOKEN_KEY);
+    } catch {
+      // Ignore storage errors.
+    }
     setToken('');
     setAdmin(null);
     setAllowedModules([]);
@@ -68,7 +92,11 @@ export function AuthProvider({ children }) {
     const payload = await response.json().catch(() => ({}));
 
     if (!response.ok) {
-      if (response.status === 401 && auth) {
+      // Avoid hard logout on every unauthorized API response.
+      // Some module endpoints can transiently return 401/403 and should show
+      // an inline error instead of forcing redirect to login.
+      const isProfileCheck = String(path || '').startsWith('/api/auth/me');
+      if (response.status === 401 && auth && isProfileCheck) {
         clearSession();
       }
       const fieldErrors = payload?.data?.errors;
@@ -94,10 +122,14 @@ export function AuthProvider({ children }) {
     }
 
     try {
-      const profile = await apiRequest('/api/auth/me');
-      const normalizedUser = normalizeUserShape(profile.user || null);
-      setAdmin(normalizedUser);
-      setAllowedModules(resolveAllowedModules(normalizedUser?.role, profile.allowedModules || []));
+      const profile = await apiRequest('/api/auth/me', { raw: true });
+      const { user, allowedModules: modules } = extractProfile(profile);
+      if (!user) {
+        clearSession();
+        return;
+      }
+      setAdmin(user);
+      setAllowedModules(resolveAllowedModules(user?.role, modules));
     } catch {
       clearSession();
     } finally {
@@ -117,7 +149,11 @@ export function AuthProvider({ children }) {
     });
 
     const loginToken = payload.token;
-    localStorage.setItem(TOKEN_KEY, loginToken);
+    try {
+      localStorage.setItem(TOKEN_KEY, loginToken);
+    } catch {
+      // Ignore storage errors and continue with in-memory token.
+    }
     setToken(loginToken);
 
     try {
@@ -129,9 +165,9 @@ export function AuthProvider({ children }) {
       const profilePayload = await profileResponse.json().catch(() => ({}));
 
       if (profileResponse.ok) {
-        const normalizedUser = normalizeUserShape(profilePayload.user || null);
-        setAdmin(normalizedUser);
-        setAllowedModules(resolveAllowedModules(normalizedUser?.role, profilePayload.allowedModules || []));
+        const { user, allowedModules: modules } = extractProfile(profilePayload);
+        setAdmin(user);
+        setAllowedModules(resolveAllowedModules(user?.role, modules));
       } else {
         const fallbackUser = normalizeUserShape(payload.user || payload.admin || null);
         setAdmin(fallbackUser);

@@ -1,22 +1,39 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './App.jsx';
-import { AuthProvider } from './contexts/AuthContext.jsx';
-import { ThemeProvider } from './contexts/ThemeContext.jsx';
-import { ToastProvider } from './contexts/ToastContext.jsx';
+const rootElement = document.getElementById('root');
+const bootFallback = document.getElementById('boot-fallback');
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <ThemeProvider>
-      <ToastProvider>
-        <AuthProvider>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-        </AuthProvider>
-      </ToastProvider>
-    </ThemeProvider>
-  </StrictMode>
-);
+function clearBootFallback() {
+  if (bootFallback) {
+    bootFallback.remove();
+  }
+}
+
+function showBootError(error) {
+  if (!bootFallback) return;
+  bootFallback.innerHTML = `
+    <div style="max-width:560px;width:100%;background:#ffffff;border:1px solid #fecaca;border-radius:12px;padding:14px;color:#7f1d1d;">
+      <div style="font-weight:700;margin-bottom:8px;">Frontend boot error</div>
+      <div style="font-size:13px;line-height:1.4;">${String(error?.message || error || 'Unknown error')}</div>
+    </div>
+  `;
+}
+
+try {
+  if (!rootElement) {
+    throw new Error('Root container not found.');
+  }
+  import('./bootApp.jsx')
+    .then((module) => module.startApp(rootElement))
+    .then(() => {
+      window.__SOCIETY_APP_BOOTED__ = true;
+      clearBootFallback();
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.error('Frontend boot failed (dynamic import):', error);
+      showBootError(error);
+    });
+} catch (error) {
+  // eslint-disable-next-line no-console
+  console.error('Frontend boot failed:', error);
+  showBootError(error);
+}

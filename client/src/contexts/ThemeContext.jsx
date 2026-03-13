@@ -5,15 +5,25 @@ const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    const storedTheme = localStorage.getItem(THEME_KEY);
-    if (storedTheme) return storedTheme;
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    try {
+      const storedTheme = typeof window !== 'undefined' ? localStorage.getItem(THEME_KEY) : '';
+      if (storedTheme) return storedTheme;
+      if (typeof window !== 'undefined') {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      return 'light';
+    } catch {
+      return 'light';
+    }
   });
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem(THEME_KEY, theme);
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch {
+      // Ignore storage write errors to avoid UI crash.
+    }
   }, [theme]);
 
   function toggleTheme() {

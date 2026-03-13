@@ -21,8 +21,8 @@ const router = express.Router();
 
 // Resident staff management
 router.post('/staff', protect, authorizeRoles(ROLES.TENANT, ROLES.OWNER, ROLES.RESIDENT), addStaff);
-router.put('/staff/:id', protect, authorizeRoles(ROLES.TENANT, ROLES.OWNER, ROLES.RESIDENT), editStaff);
-router.delete('/staff/:id', protect, authorizeRoles(ROLES.TENANT, ROLES.OWNER, ROLES.RESIDENT), removeStaff);
+router.put('/staff/:id', protect, authorizeRoles(ROLES.TENANT, ROLES.OWNER, ROLES.RESIDENT, ROLES.ADMIN, ROLES.SUPER_ADMIN), editStaff);
+router.delete('/staff/:id', protect, authorizeRoles(ROLES.TENANT, ROLES.OWNER, ROLES.RESIDENT, ROLES.ADMIN, ROLES.SUPER_ADMIN), removeStaff);
 router.get('/staff/my', protect, authorizeRoles(ROLES.TENANT, ROLES.OWNER, ROLES.RESIDENT), listMyStaff);
 router.get('/staff/:staffId/logs', protect, authorizeRoles(ROLES.TENANT, ROLES.OWNER, ROLES.RESIDENT), listResidentStaffLogs);
 

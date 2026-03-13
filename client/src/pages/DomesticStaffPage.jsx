@@ -151,7 +151,7 @@ function DomesticStaffPage() {
         showToast('Domestic staff registered.', 'success');
       }
       resetForm();
-      await loadResidentData();
+      await loadData();
     } catch (err) {
       showToast(err.message || 'Failed to save staff.', 'error');
     }
@@ -165,7 +165,7 @@ function DomesticStaffPage() {
         setAttendanceStaffId('');
         setAttendanceLogs([]);
       }
-      await loadResidentData();
+      await loadData();
     } catch (err) {
       showToast(err.message || 'Failed to remove staff.', 'error');
     }
@@ -392,61 +392,6 @@ function DomesticStaffPage() {
               </form>
             </section>
 
-            <EditPopup open={Boolean(editingId)} title="Edit Staff" onClose={resetForm} maxWidthClass="max-w-3xl">
-              <form onSubmit={submitStaff} className="grid gap-3 md:grid-cols-2">
-                <input value={form.name} onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))} required placeholder="Staff full name" className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
-                <input value={form.phone} onChange={(e) => setForm((prev) => ({ ...prev, phone: e.target.value }))} required placeholder="Staff phone number" className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
-                <label className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-dashed border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-600">
-                  <FiUploadCloud />
-                  Upload staff photo (optional)
-                  <input type="file" accept="image/*" className="hidden" onChange={(e) => uploadStaffPhoto(e.target.files?.[0])} />
-                </label>
-                <select value={form.workType} onChange={(e) => setForm((prev) => ({ ...prev, workType: e.target.value }))} className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm">
-                  {WORK_TYPES.map((workType) => (
-                    <option key={workType} value={workType}>{workType}</option>
-                  ))}
-                </select>
-                <input value={form.houseNumber} onChange={(e) => setForm((prev) => ({ ...prev, houseNumber: e.target.value }))} required placeholder="Assigned house/flat number" className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
-                <div className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm">
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Working Days</p>
-                  <div className="flex flex-wrap gap-2">
-                    {DAYS.map((day) => (
-                      <label key={day} className="inline-flex items-center gap-1 text-xs">
-                        <input
-                          type="checkbox"
-                          checked={form.workingDays.includes(day)}
-                          onChange={(e) => {
-                            setForm((prev) => ({
-                              ...prev,
-                              workingDays: e.target.checked
-                                ? [...prev.workingDays, day]
-                                : prev.workingDays.filter((d) => d !== day),
-                            }));
-                          }}
-                        />
-                        {day}
-                      </label>
-                    ))}
-                  </div>
-                </div>
-                <input type="time" value={form.expectedEntryTime} onChange={(e) => setForm((prev) => ({ ...prev, expectedEntryTime: e.target.value }))} className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
-                <input type="time" value={form.expectedExitTime} onChange={(e) => setForm((prev) => ({ ...prev, expectedExitTime: e.target.value }))} className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
-                {form.photo ? (
-                  <a href={form.photo} target="_blank" rel="noreferrer" className="md:col-span-2 inline-flex items-center gap-2 rounded-lg bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700 hover:bg-slate-200">
-                    <FiImage size={12} /> View uploaded photo
-                  </a>
-                ) : null}
-                <div className="md:col-span-2 flex gap-2">
-                  <button className="rounded-xl bg-cyan-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-cyan-700">
-                    Update Staff
-                  </button>
-                  <button type="button" onClick={resetForm} className="rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700">
-                    Cancel
-                  </button>
-                </div>
-              </form>
-            </EditPopup>
-
             <section className="classy-list-shell rounded-2xl border border-slate-200 bg-white p-5 shadow-panel">
               <div className="classy-list-toolbar mb-3 flex flex-wrap items-center gap-2">
                 <h3 className="mr-auto text-lg font-semibold text-slate-900">Staff List</h3>
@@ -646,11 +591,19 @@ function DomesticStaffPage() {
                 <div key={item._id} className="rounded-lg border border-slate-200 p-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <p className="font-semibold text-slate-900">{item.name} ({item.workType})</p>
-                    <select value={item.status} onChange={(e) => updateStaffStatus(item._id, e.target.value)} className="rounded-lg border border-slate-200 px-2 py-1 text-xs">
-                      <option value="active">active</option>
-                      <option value="blocked">blocked</option>
-                      <option value="inactive">inactive</option>
-                    </select>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <select value={item.status} onChange={(e) => updateStaffStatus(item._id, e.target.value)} className="rounded-lg border border-slate-200 px-2 py-1 text-xs">
+                        <option value="active">active</option>
+                        <option value="blocked">blocked</option>
+                        <option value="inactive">inactive</option>
+                      </select>
+                      <button type="button" onClick={() => startEdit(item)} className="rounded-lg bg-cyan-600 px-2.5 py-1 text-xs font-semibold text-white">
+                        Edit
+                      </button>
+                      <button type="button" onClick={() => deleteStaff(item._id)} className="rounded-lg bg-rose-600 px-2.5 py-1 text-xs font-semibold text-white">
+                        Delete
+                      </button>
+                    </div>
                   </div>
                   <p className="text-xs text-slate-500">Resident: {item.residentId?.name || '-'} | House: {item.houseNumber}</p>
                   <p className="text-xs text-slate-500"><FiPhone className="mr-1 inline" />{item.phone}</p>
@@ -682,6 +635,61 @@ function DomesticStaffPage() {
           </section>
         </>
       )}
+
+      <EditPopup open={Boolean(editingId)} title="Edit Staff" onClose={resetForm} maxWidthClass="max-w-3xl">
+        <form onSubmit={submitStaff} className="grid gap-3 md:grid-cols-2">
+          <input value={form.name} onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))} required placeholder="Staff full name" className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
+          <input value={form.phone} onChange={(e) => setForm((prev) => ({ ...prev, phone: e.target.value }))} required placeholder="Staff phone number" className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
+          <label className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-dashed border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-600">
+            <FiUploadCloud />
+            Upload staff photo (optional)
+            <input type="file" accept="image/*" className="hidden" onChange={(e) => uploadStaffPhoto(e.target.files?.[0])} />
+          </label>
+          <select value={form.workType} onChange={(e) => setForm((prev) => ({ ...prev, workType: e.target.value }))} className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm">
+            {WORK_TYPES.map((workType) => (
+              <option key={workType} value={workType}>{workType}</option>
+            ))}
+          </select>
+          <input value={form.houseNumber} onChange={(e) => setForm((prev) => ({ ...prev, houseNumber: e.target.value }))} required placeholder="Assigned house/flat number" className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
+          <div className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Working Days</p>
+            <div className="flex flex-wrap gap-2">
+              {DAYS.map((day) => (
+                <label key={day} className="inline-flex items-center gap-1 text-xs">
+                  <input
+                    type="checkbox"
+                    checked={form.workingDays.includes(day)}
+                    onChange={(e) => {
+                      setForm((prev) => ({
+                        ...prev,
+                        workingDays: e.target.checked
+                          ? [...prev.workingDays, day]
+                          : prev.workingDays.filter((d) => d !== day),
+                      }));
+                    }}
+                  />
+                  {day}
+                </label>
+              ))}
+            </div>
+          </div>
+          <input type="time" value={form.expectedEntryTime} onChange={(e) => setForm((prev) => ({ ...prev, expectedEntryTime: e.target.value }))} className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
+          <input type="time" value={form.expectedExitTime} onChange={(e) => setForm((prev) => ({ ...prev, expectedExitTime: e.target.value }))} className="rounded-xl border border-slate-200 px-3 py-2.5 text-sm" />
+          {form.photo ? (
+            <a href={form.photo} target="_blank" rel="noreferrer" className="md:col-span-2 inline-flex items-center gap-2 rounded-lg bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700 hover:bg-slate-200">
+              <FiImage size={12} /> View uploaded photo
+            </a>
+          ) : null}
+          <div className="md:col-span-2 flex gap-2">
+            <button className="rounded-xl bg-cyan-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-cyan-700">
+              Update Staff
+            </button>
+            <button type="button" onClick={resetForm} className="rounded-xl border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </EditPopup>
     </div>
   );
 }
